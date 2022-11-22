@@ -1,0 +1,13 @@
+{% for audio in audios %}
+      <tr>
+          <td>{{ audio.name }}</td>
+        <!-- <td><a href="{{ audio.file.url }}" target="_blank">{{ audio.file.name }}</a></td> -->
+        <td>{{ audio.date_created }}</td>
+        <!-- <td>{{ audio.file.size|filesizeformat }}</td> -->
+        <td>{{ audio.message }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="3">No data.</td>
+      </tr>
+    {% endfor %}
